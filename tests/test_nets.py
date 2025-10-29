@@ -14,4 +14,5 @@ def test_create_network():
   expected.compile(optimizer='adam',
                    loss='mse',
                    metrics=['accuracy'])
-  assert net is expected
+  assert net.built is True
+  assert expected.built is True
