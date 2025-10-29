@@ -8,8 +8,8 @@ def test_create_network():
                                activation=['relu', 'relu', 'sigmoid']) # only hidden and output
   expected = tf.keras.models.Sequential([
     tf.keras.layers.Dense(5, activation='relu', input_shape=(2,)),
-    tf.keras.layers.Dense(5, activation='relu')
-    tf.keras.layers.Dense(1, activation='sigmoid')
+    tf.keras.layers.Dense(5, activation='relu'),
+    tf.keras.layers.Dense(1, activation='sigmoid'),
   ])
   expected.compile(optimizer='adam',
                    loss='mse',
