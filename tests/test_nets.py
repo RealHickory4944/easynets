@@ -22,7 +22,7 @@ def test_train():
   net = en.nets.create_network(num_layers=4,
                                layers=[2, 5, 5, 1],
                                activation=['relu', 'relu', 'sigmoid'])
-  X = np.array([[0, 0], [1, 0], [0, 1], [1, 1])
+  X = np.array([[0, 0], [1, 0], [0, 1], [1, 1]])
   y = np.array([[0], [1], [1], [0]])
   net.train(
     X, y,
