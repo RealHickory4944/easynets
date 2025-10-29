@@ -10,7 +10,7 @@ def create_network(num_layers, layers, activation):
       x = [(tf.keras.layers.Dense(layers[1], activation=activation[i], input_shape=(layers[0],)))]
     else:
       x.append(tf.keras.layers.Dense(layers[i + 1], activation=activation[i]))
-  x = tf.keras.models.Sequential(x)
+  x = Model(x)
   x.compile(optimizer='adam',
             loss='mse',
             metrics=['accuracy'])
