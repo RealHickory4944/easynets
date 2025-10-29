@@ -1,5 +1,9 @@
 import tensorflow as tf
 
+class Model(tf.keras.Model):
+  def train(self, *args, **kwargs):
+    return self.fit(*args, **kwargs)
+
 def create_network(num_layers, layers, activation):
   for i in range(num_layers - 1):
     if i == 0:
@@ -11,6 +15,3 @@ def create_network(num_layers, layers, activation):
             loss='mse',
             metrics=['accuracy'])
   return x
-
-def train(self, *args, **kwargs):
-  return self.fit(*args, **kwargs)
