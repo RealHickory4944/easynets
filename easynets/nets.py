@@ -1,6 +1,6 @@
 import tensorflow as tf
 
-class Model(tf.keras.Model):
+class Model(tf.keras.models.Sequential):
   def train(self, *args, **kwargs):
     return self.fit(*args, **kwargs)
 
